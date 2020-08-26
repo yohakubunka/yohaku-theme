@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+@import "mixin.scss";
+@import "code-prettify.css";
+
+html {
+  font-size: 10px!important;
+}
+
+body{
+  width: 100%;
+  font-family:"Helvetica Neue" , Helvetica , Arial , Verdana , Roboto ,"游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic";
+  position: relative;
+  font-size: 1.6rem;
+  color: #333333;
+  letter-spacing: 0.07em;
+}
+
+// setting ========================================================
+// font ===========================================================
+@for $i from 10 through 80 {
+  .font#{$i} { font-size: #{$i}px}
+}
+
+
+@import "rereboot";
+@import "basic";
+@import "index";
+@import "header";
+@import "footer";
+@import "404";
+@import "page";
+@import "single";
+@import "front-page";
+@import "sidebar";
+@import "tag";
+@import "category";
+@import "date";
+@import "archive";
+@import "admin";
+
+.breadcrumb-list {
+  list-style: none;
+  li {display: inline-block;}
+}
