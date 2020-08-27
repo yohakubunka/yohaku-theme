@@ -16,7 +16,7 @@
     </div>
   </div>
 </footer>
-
+<script src="<?php echo get_template_directory_uri() ?>/js/particles.js"></script>
 <?php wp_footer(); ?>
 <?php
 if (current_user_can('administrator')) {

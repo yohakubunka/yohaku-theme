@@ -6,38 +6,27 @@
     <meta name="description" content="<?php seo_description(); ?>">
     <title><?php wp_title('|', true, 'right'); ?></title>
     <?php wp_head(); ?>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.6/lottie.min.js" type="text/javascript"></script>
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
-        <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="Navber">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" class="dropdown-item" href="<?php echo esc_url( home_url( '/' ) ); ?>news">archive</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">リンク</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                ドロップダウン
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">メニュー1</a>
-                <a class="dropdown-item" href="#">メニュー2</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">その他</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">無効</a>
-            </li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </nav>
+    <div id="particles-js"></div>
+    <header class="">
+      <div class="container">
+        <div class="flex align-center justify-center">
+          <div class="title mr-auto">
+            <div class="flex align-center justify-center logo-wrap">
+              <h1><?php bloginfo( 'name' ); ?></h1>
+            </div>
+          </div>
+          <nav>
+            <ul class="flex align-center justify-center ml-auto">
+              <li><a href="">Top</a></li>
+              <li><a href="">News</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>

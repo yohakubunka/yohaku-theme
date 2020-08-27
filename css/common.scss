@@ -16,6 +16,15 @@ body{
   letter-spacing: 0.07em;
 }
 
+a {
+  color: $color1;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: invert($color1);
+  }
+}
+
 // setting ========================================================
 // font ===========================================================
 @for $i from 10 through 80 {
@@ -24,7 +33,7 @@ body{
 
 
 @import "rereboot";
-@import "basic";
+@import "basic-style";
 @import "index";
 @import "header";
 @import "footer";
@@ -39,7 +48,13 @@ body{
 @import "archive";
 @import "admin";
 
-.breadcrumb-list {
-  list-style: none;
-  li {display: inline-block;}
+.sp {
+  @media screen and (min-width:768px) {
+    display: none;
+  }
+}
+.pc {
+  @media screen and (max-width:767px) {
+    display: none;
+  }
 }
