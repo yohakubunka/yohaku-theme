@@ -1,4 +1,5 @@
 <?php
+$theme_debug_mode = True;
 // wordpress basic options --------------------------------------------------------------------------------
 //@codex https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/add_theme_support
 function my_setup() {
@@ -30,19 +31,30 @@ add_action( 'init', 'my_menu_init' );
  // read script style sheet --------------------------------------------------------------------------------
  //headで読み込ませる
 function my_script_init() {
+  global $theme_debug_mode;
   wp_enqueue_style( 'style-name', get_template_directory_uri() . '/css/bootstrap.css', array(), '1.0.0', 'all' );
-  wp_enqueue_style( 'common_css', get_template_directory_uri() . '/css/common.min.css', array(), '1.0.0', 'all' );
+  // デバッグモードだった場合はCSSを読み込む
+  if ($theme_debug_mode) {
+    wp_enqueue_style( 'common_css', get_template_directory_uri() . '/css/common.css', array(), '1.0.0', 'all' );
+    wp_enqueue_style( 'debug_css', get_template_directory_uri() . '/debug/css/debug.css', array(), '1.0.0', 'all' );
+  }else {
+    wp_enqueue_style( 'common_css', get_template_directory_uri() . '/css/common.min.css', array(), '1.0.0', 'all' );
+  }
   // fontawesome
   wp_enqueue_script('fontawesome_js', 'https://kit.fontawesome.com/39468e6aef.js', array());
 }
 add_action( 'wp_enqueue_scripts', 'my_script_init' );
 //footerで読み込ませる
 function my_load_widget_scripts() {
+  global $theme_debug_mode;
     wp_enqueue_script('jquery_js', get_template_directory_uri() . '/js/jquery-3.4.1.min.js', array());
     // Bootstrap_script
     wp_enqueue_script('bootstrap_js', get_template_directory_uri() . '/js/bootstrap.bundle.js', array());
     // common_script
     wp_enqueue_script('common_js', get_template_directory_uri() . '/js/common.js', array());
+    if ($theme_debug_mode) {
+      wp_enqueue_script('debug_js', get_template_directory_uri() . '/debug/js/debug.js', array());
+    }
     // code-prettify
     wp_enqueue_script('code-ttify_js', 'https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js', array());
 }

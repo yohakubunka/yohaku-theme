@@ -19,8 +19,9 @@
 <script src="<?php echo get_template_directory_uri() ?>/js/particles.js"></script>
 <?php wp_footer(); ?>
 <?php
-if (current_user_can('administrator')) {
-  get_template_part( 'template-parts/config-data' );
+global $theme_debug_mode;
+if ($theme_debug_mode) {
+  get_template_part( 'debug/config-data' );
 }
 ?>
 <style>

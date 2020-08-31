@@ -1,0 +1,35 @@
+#wpadminbar {
+  display: none;
+}
+
+#configData {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  width: 100%;
+  background-color: rgba(46,46,46,.23);
+  z-index: 200;
+  .dataContain {
+    max-width: 95vw;
+    margin: auto;
+    background-color: #fff;
+    padding: 50px;
+    .dataFlex {
+      display: flex;
+      .DataSideNav {
+        max-width: 270px;
+        ul {
+          padding-left: 1em;
+          border-left: 1px solid #333;
+        }
+      }
+      .DataMain {
+        padding: 0 50px;
+      }
+    }
+  }
+}

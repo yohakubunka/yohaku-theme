@@ -92,6 +92,10 @@ body {
   letter-spacing: 0.07em;
 }
 
+pre {
+  background-color: rgba(51, 51, 51, 0.36);
+}
+
 a {
   color: #343a40;
   text-decoration: none;
@@ -443,16 +447,28 @@ ul {
   justify-content: flex-start;
 }
 
+#particles-js {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  z-index: -10;
+  opacity: 0.6;
+}
+
+#lottie1 {
+  z-index: -10;
+}
+
 header {
   padding: 50px 0px;
 }
 
-header .logo-wrap img {
-  max-width: 60px;
-  margin-right: 15px;
-}
-
-header .logo-wrap h1 {
+header .title h1 {
   letter-spacing: 0.18em;
 }
 
@@ -476,82 +492,26 @@ footer .footer-sns i {
   color: #72DEFF;
 }
 
-#wpadminbar {
-  min-width: 32px;
-  width: 32px;
-  left: initial;
-  right: 0;
-  overflow: hidden;
-  transition-duration: 0.7s;
-  border-radius: 50px 0px 0px 50px;
-  cursor: pointer;
+.ty-masse {
+  padding: 180px 0;
+  position: relative;
 }
 
-@media screen and (max-width: 767px) {
-  #wpadminbar {
-    display: none;
-  }
-}
-
-#wpadminbar:hover {
+.ty-masse #lottie1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   width: 100%;
-  overflow: initial;
-  height: 45px;
-  padding-top: 7px;
-  border-radius: 0px;
-  cursor: initial;
 }
 
-#config-data {
-  color: #343a40;
-  border: 2px solid #343a40;
-  border-right: 0;
-  background-color: #FFF;
-  position: fixed;
-  border-radius: 50px 0px 0px 50px;
-  right: 0;
-  top: 60px;
-  min-width: 32px;
-  width: 32px;
-  height: 36px;
-  overflow: hidden;
-  transition-duration: 0.4s;
-  padding: 4px 0px;
-  padding-left: 8px;
-  font-family: 'Cutive Mono', monospace;
-}
-
-#config-data p {
-  margin-bottom: 1em;
-  font-family: 'Cutive Mono', monospace;
-  color: #333333;
-}
-
-#config-data .indent {
-  text-indent: -1em;
-  padding-left: 2em;
-}
-
-#config-data:hover {
-  width: auto;
-  max-width: 480px;
-  overflow: initial;
-  height: auto;
-  padding: 16px;
-  border-radius: 0px;
-  cursor: initial;
-}
-
-#config-data:hover .config-mark {
-  display: none;
-}
-
-#config-data:hover p {
-  font-size: 12px;
-}
-
-#config-data:hover p span {
-  color: #757575;
+.ty-masse h2 {
+  text-align: center;
+  font-size: 36px;
+  letter-spacing: 0.12em;
+  font-weight: 600;
 }
 
 @media screen and (min-width: 768px) {

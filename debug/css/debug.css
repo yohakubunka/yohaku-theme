@@ -1,0 +1,40 @@
+#wpadminbar {
+  display: none;
+}
+
+#configData {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  width: 100%;
+  background-color: rgba(46, 46, 46, 0.23);
+  z-index: 200;
+}
+
+#configData .dataContain {
+  max-width: 95vw;
+  margin: auto;
+  background-color: #fff;
+  padding: 50px;
+}
+
+#configData .dataContain .dataFlex {
+  display: flex;
+}
+
+#configData .dataContain .dataFlex .DataSideNav {
+  max-width: 270px;
+}
+
+#configData .dataContain .dataFlex .DataSideNav ul {
+  padding-left: 1em;
+  border-left: 1px solid #333;
+}
+
+#configData .dataContain .dataFlex .DataMain {
+  padding: 0 50px;
+}
